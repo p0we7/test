@@ -1,0 +1,22 @@
+
+name: 'actions-test-shell'
+description: 'test actions'
+
+branding:
+  icon: airplay
+  color: blue
+
+inputs:
+  ngrok-token:
+    required: true
+  password:
+    required: false
+    default: "P@ssw0rd!"
+  foreground:
+    required: false
+    default: true
+
+runs:
+  using: 'node16'
+  main: 'dist/start/index.js'
+  post: 'dist/wait/index.js'

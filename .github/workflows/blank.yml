@@ -24,7 +24,7 @@ jobs:
           foreground: false
 
       - name: sleep sometime
-        run: timeout /t 60 /nobreak 
+        run: Start-Sleep 10
           
 
 

@@ -10,8 +10,8 @@ on:
       windwos_version:
         type: choice
         required: true
-        default: 'windows-latest'
         options: 
+          - windows-latest
           - windows-2025
           - windows-2022
           - windows-2019

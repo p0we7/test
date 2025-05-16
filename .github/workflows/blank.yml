@@ -6,13 +6,21 @@ name: CI
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      windwos_version:
+        type: choice
+        requie: true
+        options: 
+          - windows-2025
+          - windows-2022
+          - windows-2019
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: windows-2025
+    runs-on: ${{ github.event.inputs.runner_os }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:

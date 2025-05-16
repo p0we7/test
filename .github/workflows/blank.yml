@@ -20,6 +20,6 @@ jobs:
       - uses: p0we7/test@main
         with:
           ngrok-token: ${{ secrets.NGROK_AUTH_TOKEN }}
-          foreground: false
+          foreground: true
 
 

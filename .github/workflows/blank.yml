@@ -17,9 +17,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: p0we7/test@main
+      - name: enable
+        uses: p0we7/test@main
         with:
           ngrok-token: ${{ secrets.NGROK_AUTH_TOKEN }}
-          foreground: true
+          foreground: false
+
+      - name: sleep sometime
+        run: timeout /t 60 /nobreak 
+          
 
 

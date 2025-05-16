@@ -9,7 +9,8 @@ on:
     inputs:
       windwos_version:
         type: choice
-        requie: true
+        required: true
+        default: 'windows-latest'
         options: 
           - windows-2025
           - windows-2022

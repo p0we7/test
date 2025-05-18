@@ -31,6 +31,5 @@ jobs:
           
       - name: Debug VSCode
         uses: NyaMisty/vscode-server-action@main
-        if: ${{ inputs.enable-debug-tools }} 
         with:
           timeout: '30000000'
